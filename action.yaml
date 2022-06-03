@@ -24,5 +24,4 @@ outputs:
 runs:
   using: node16
   main: dist/main/index.js
-  post-if: success() || ${{ env.INPUT_ALWAYS_SAVE }} == "1"
   post: dist/post/index.js
