@@ -24,5 +24,5 @@ outputs:
 runs:
   using: node16
   main: dist/main/index.js
-  post-if: success() || ${{ github.event.inputs.always_save }} == "1"
+  post-if: success() || ${{ env.INPUT_ALWAYS_SAVE }} == "1"
   post: dist/post/index.js
